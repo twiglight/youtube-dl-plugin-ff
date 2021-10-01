@@ -18,6 +18,31 @@
                     <input type="text" class="form-control" id="input-url" name="url" placeholder="http://{ip}:{port}/youtube-dl/q" required />
                 </div>
                 <div class="mb-2">
+                    <label for="input-format" class="form-label">Format option</label>
+                    <select class="form-select" id="input-format"  aria-label="Default select example">
+                        <option disabled>---- Video ----</option>
+                        <option value="bestvideo">Best Video</option>
+                        <option value="mp4">MP4</option>
+                        <option value="flv">Flash Video (FLV)</option>
+                        <option value="webm">WebM</option>
+                        <option value="ogg">Ogg</option>
+                        <option value="mkv">Matroska (MKV)</option>
+                        <option value="avi">AVI</option>
+
+                        <option disabled>---- Audio ----</option>
+                        <option value="bestaudio">Best Audio</option>
+                        <option value="aac">AAC</option>
+                        <option value="flac">FLAC</option>
+                        <option value="mp3">MP3</option>
+                        <option value="m4a">M4A</option>
+                        <option value="opus">Opus</option>
+                        <option value="vorbis">Vorbis</option>
+                        <option value="wav">WAV</option>
+                    </select>
+                        
+                    </select>
+                </div>
+                <div class="mb-2">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>

@@ -10,7 +10,7 @@ function download(tab) {
                     method: "POST",
                     body: new URLSearchParams({
                         url: tab.url,
-                        format: "bestvideo"
+                        format: storage.format ?? "bestvideo"
                     })
                 }).then(() => {
                     browser.pageAction.setIcon({tabId: tab.id, path: "icons/success.png"});
