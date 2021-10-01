@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "youtube-dl server plugin",
+    "version": "0.1",
+    "description": "A simple plugin which can send download requests to a youtube-dl server",
+
+    "icons": {
+        "48": "icons/48.png",
+        "96": "icons/96.png"
+    },
+
+    "background": {
+        "scripts": ["main.js", "settings.js"]
+    },
+
+    "page_action": {
+        "default_icon": "icons/48.png"
+    },
+
+    "browser_action": {
+        "default_icon": "icons/96.png"
+    },
+
+    "options_ui": {
+        "page": "settings.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage"
+      ]    
+}

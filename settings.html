@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings youtube-dl server</title>
+
+        <link rel="icon" href="icons/default.svg" type="image/svg+xml">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body class="bg-light">
+        <div class="container">
+            
+            <form>
+                <div class="mb-3 py-5 text-center">
+                    <img src="icons/96.png" alt="youtube-dl server plugin" />
+                </div>
+                <div class="mb-2">
+                    <label for="input-url" class="form-label">Server download url</label>
+                    <input type="text" class="form-control" id="input-url" name="url" placeholder="http://{ip}:{port}/youtube-dl/q" required />
+                </div>
+                <div class="mb-2">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascript" src="settings.js"></script>
+    </body>
+</html>
