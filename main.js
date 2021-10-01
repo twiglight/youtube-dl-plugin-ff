@@ -29,7 +29,7 @@ function isApplicable(url) {
 
 function initialize(tab) {
     if (isApplicable(tab.url)) {
-        browser.pageAction.setIcon({tabId: tab.id, path: "icons/48.png"});
+        browser.pageAction.setIcon({tabId: tab.id, path: "icons/default.png"});
         browser.pageAction.setTitle({tabId: tab.id, title: "Send to download server"});
         browser.pageAction.show(tab.id);
     }
