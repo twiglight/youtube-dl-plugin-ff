@@ -1,8 +1,9 @@
 {
     "manifest_version": 2,
     "name": "youtube-dl server plugin",
-    "version": "0.1",
+    "version": "0.2",
     "description": "A simple plugin which can send download requests to a youtube-dl server",
+    "homepage_url": "https://github.com/twiglight/yt-dl-ff-plugin",
 
     "icons": {
         "48": "icons/48.png",
@@ -10,11 +11,12 @@
     },
 
     "background": {
-        "scripts": ["main.js", "settings.js"]
+        "scripts": ["background.js"]
     },
 
     "page_action": {
-        "default_icon": "icons/48.png"
+        "default_icon": "icons/48.png",
+        "default_popup": "download.html"
     },
 
     "browser_action": {
