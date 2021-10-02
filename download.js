@@ -1,12 +1,12 @@
 const CURRENT_WINDOW = {active: true, currentWindow: true};
 
-function download(tab) {
+function download(videoUrl, format) {
     browser.storage.local.get().then((storage) => {
         fetch(storage.url, {
             method: "POST",
             body: new URLSearchParams({
-                url: tab.url,
-                format: document.querySelector("#input-format").value
+                url: videoUrl,
+                format: format
             })
         });
     }, console.log);
@@ -20,8 +20,15 @@ document.querySelector("form").addEventListener("submit", async event => {
     event.preventDefault();
 
     browser.tabs.query(CURRENT_WINDOW)
-        .then((t) => { download(t[0]); })
-        .catch(console.log);
+        .then((t) => { 
+            browser.runtime.sendMessage({
+                type: "download",
+                payload: {
+                    url: t[0].url,
+                    format: document.querySelector("#input-format").value
+                }
+            }); 
+        }).catch(console.log);
 
         document.querySelector("#submit").innerText = "Downloading...";
         document.querySelector("#submit").disabled = true;
@@ -30,3 +37,5 @@ document.querySelector("form").addEventListener("submit", async event => {
 browser.tabs.query(CURRENT_WINDOW)
     .then((t) => { loadCurrentTabInfo(t[0]); })
     .catch(console.log);
+
+    

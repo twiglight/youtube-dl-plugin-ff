@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "youtube-dl server plugin",
-    "version": "0.2",
+    "version": "0.3",
     "description": "A simple plugin which can send download requests to a youtube-dl server",
     "homepage_url": "https://github.com/twiglight/yt-dl-ff-plugin",
 
@@ -30,6 +30,7 @@
     "permissions": [
         "activeTab",
         "tabs",
-        "storage"
+        "storage",
+        "menus"
       ]    
 }
